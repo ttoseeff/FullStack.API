@@ -15,5 +15,7 @@ namespace FullStack.API.Models
 
         [NotMapped]
         public string JwtToken { get; set; }
+
+        public List<Employee> Employees {get; set; }
     }
 }

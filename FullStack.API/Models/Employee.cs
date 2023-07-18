@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FullStack.API.Models
 {
@@ -10,5 +11,8 @@ namespace FullStack.API.Models
         public long Phone { get; set; }
         public long Salary { get; set; }
         public string Department { get; set; }
+
+        [ForeignKey("User")]
+        public int? UserId { get; set; }
     }
 }

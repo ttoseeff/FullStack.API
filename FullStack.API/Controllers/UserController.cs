@@ -36,7 +36,7 @@ namespace FullStack.API.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> LoginUser(LoginUser user)
         {
-            var UserExist = await this._context.Users.FirstOrDefaultAsync(x=> x.Email == user.Email && x.Password == user.Password  );
+            var UserExist = await this._context.Users.FirstOrDefaultAsync(x=> x.Email == user.Email && x.Password == user.Password);
             if (UserExist != null)
             {
                 user.responseMsg = "Success";
